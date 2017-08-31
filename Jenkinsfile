@@ -11,7 +11,7 @@ pipeline {
           export BASE_OS=rhel7
           export GIT_COMMIT=$(git rev-parse HEAD)
           export GIT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
-          DOCKER_NAMESPACE="docker-registry.pdbld.f5net.com/velcro"
+          DOCKER_NAMESPACE="docker-registry.pdbld.f5net.com/kevin"
           BASE_PUSH_TARGET="$DOCKER_NAMESPACE/k8s-bigip-ctlr"
           export IMG_TAG="${BASE_PUSH_TARGET}:${GIT_COMMIT}-$BASE_OS"
           export BUILD_IMG_TAG="${BASE_PUSH_TARGET}-devel:${GIT_COMMIT}-$BASE_OS"
